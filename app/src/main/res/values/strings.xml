@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NavigationChallenge</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="your_name">Your name</string>
+    <string name="next"><![CDATA[Next>]]></string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="submit">Submit</string>
+    <string name="your_email">Your Email</string>
+    <string name="welcome">Welcome</string>
+    <string name="view_term">View Term</string>
+</resources>
