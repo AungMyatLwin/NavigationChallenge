@@ -13,7 +13,7 @@ import com.practice.navigationchallenge.databinding.FragmentEmailBinding
 
 class EmailFragment : Fragment(){
     private lateinit var binding:FragmentEmailBinding
-    private val args= NameFragmentArgs.fromBundle(arguments)
+    lateinit var args:EmailFragmentArgs
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +24,17 @@ class EmailFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_email, container, false)
-        Log.d("args ", "onCreateView: ${args.signUpName}")
+
+       arguments?.let {
+            val arg= EmailFragmentArgs.fromBundle(it)
+           args=arg
+       }
+        Log.d("args ", "onCreateView: ${args.signupName}")
 
         binding.submitBtn.setOnClickListener {
-            val arrays = arrayListOf(args.signUpName,binding.inputEmail.text.toString())
 
-            val action= EmailFragmentDirections.actionEmailFragmentToWelcomeFragment()
+            val arrays = arrayListOf(args.signupName,binding.inputEmail.text.toString())
+            val action= EmailFragmentDirections.actionEmailFragmentToWelcomeFragment(arrays.toTypedArray())
             it.findNavController().navigate(action)
         }
         return binding.root

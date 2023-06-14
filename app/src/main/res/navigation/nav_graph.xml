@@ -32,9 +32,7 @@
         <action
             android:id="@+id/action_nameFragment_to_emailFragment"
             app:destination="@id/emailFragment" />
-        <argument
-            android:name="signUpName"
-            app:argType="string" />
+
     </fragment>
 
     <fragment
@@ -46,8 +44,8 @@
             android:id="@+id/action_emailFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
 
-        <argument android:name="signupEmail"
-            app:argType="string[]"/>
+        <argument android:name="signupName"
+            app:argType="string"/>
 
     </fragment>
 
@@ -59,6 +57,9 @@
         <action
             android:id="@+id/action_welcomeFragment_to_termsFragment"
             app:destination="@id/termsFragment" />
+        <argument android:name="argArr"
+            app:argType="string[]"
+            />
 
     </fragment>
 

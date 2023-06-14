@@ -38,9 +38,9 @@ class NameFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding=DataBindingUtil.inflate(inflater, R.layout.fragment_name, container, false)
-        binding.nameTextView.setOnClickListener{
+        binding.nextBtn.setOnClickListener{
 
-            val action = NameFragmentDirections.actionNameFragmentToEmailFragment(binding.inputName.toString())
+            val action = NameFragmentDirections.actionNameFragmentToEmailFragment(binding.inputName.text.toString())
             it.findNavController().navigate(action)
         }
         return binding.root
